@@ -1,0 +1,10 @@
+name: MagicLamps
+main: net.vectorgaming.magiclamps.MagicLamps
+version: 0.3
+author: exload
+website: http://arcanerealm.net
+description: MagicLamps - Create lamps with no redstone
+
+commands:
+  mgl:
+    description: MagicLamps base command

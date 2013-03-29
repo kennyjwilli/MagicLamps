@@ -1,0 +1,21 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                       MagicLamps                     | #
+# +------------------------------------------------------+ #
+############################################################
+
+#Config version - 0.1
+#Developed by Kenny Williams | exload
+#Website: http://mcacraft.com/
+#Forums: http://forums.mcacraft.com/
+#YouTube: http://www.youtube.com/mrcomputeranswers
+#Questions, comments, or bugs, email me: support@mcacraft.com
+
+#Mcstats.org reporting. This information is harmless and simply provides me, the
+#developer, with useful stats on this plugin.
+mcstats: true
+
+auto-update: true
+
+#Do NOT mess with this. It WILL break the plugin.
+config-version: 0.3
