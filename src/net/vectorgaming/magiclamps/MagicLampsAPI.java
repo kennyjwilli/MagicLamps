@@ -26,13 +26,10 @@ public class MagicLampsAPI
      * @param pname The name of the player
      * @param state True to enable; false to disable
      */
-    public static void setSLCreation(String pname, boolean state)
-    {
-        singleLampCheck.put(pname, state);
-    }
+    public static void setSLCreation(String pname, boolean state) {singleLampCheck.put(pname, state);}
     
     /**
-     * 
+     * Checks to see if a player can create a single lamp
      * @param pname Player name
      * @return True if a player can create a lamp; false if they cannot
      */
@@ -48,13 +45,10 @@ public class MagicLampsAPI
      * @param pname Player name
      * @param state True to enable; false to disable
      */
-    public static void setMLCreation(String pname, boolean state)
-    {
-        multiLampCheck.put(pname, state);
-    }
+    public static void setMLCreation(String pname, boolean state) {multiLampCheck.put(pname, state);}
     
     /**
-     *
+     * Checks to see if a player is able to continually click and create lamps
      * @param pname Player name
      * @return True if player is in Continuous Lamp Creation mode; false if not
      */
@@ -190,41 +184,29 @@ public class MagicLampsAPI
     }
     
     /**
-     * 
+     * Get the current version of the plugin set in the plugin.yml
      * @return The version of the plugin
      */
-    public static String getVersion()
-    {
-        return plugin.getDescription().getVersion();
-    }
+    public static String getVersion(){return plugin.getDescription().getVersion();}
     
     /**
      * This method should be used only in extreme circumstances. If you do not know what
      * you are doing you could lose all of your saved lamps.
      * @return The HashMap containing all of the lamps
      */
-    public static HashMap<String,ArrayList<String>> getLampsMap()
-    {
-        return lamps;
-    }
+    public static HashMap<String,ArrayList<String>> getLampsMap(){return lamps;}
     
     /**
      * This method should be used only in extreme circumstances. If you do not know what
      * you are doing you could lose all of your saved lamps.
      * @param map A HashMap containing all of the lamps
      */
-    public static void setLampsMap(HashMap<String,ArrayList<String>> map)
-    {
-        lamps = map;
-    }
+    public static void setLampsMap(HashMap<String,ArrayList<String>> map){lamps = map;}
     
     /**
-     * 
+     * Returns the MagicLamps plugin
      * @return MagicLamps plugin
      */
-    public static MagicLamps getPlugin()
-    {
-        return plugin;
-    }
+    public static MagicLamps getPlugin(){return plugin;}
     
 }

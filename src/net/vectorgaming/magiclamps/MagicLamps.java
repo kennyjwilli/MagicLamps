@@ -6,9 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.logging.Level;
 import net.vectorgaming.magiclamps.commands.MglCommand;
-import net.vectorgaming.magiclamps.listeners.BlockBreakListener;
-import net.vectorgaming.magiclamps.listeners.PlayerInteractListener;
-import net.vectorgaming.magiclamps.listeners.RedstoneListener;
+import net.vectorgaming.magiclamps.listeners.*;
 import net.vectorgaming.magiclamps.util.SLAPI;
 import net.vectorgaming.vchat.util.VConfig;
 import org.bukkit.Bukkit;
@@ -26,9 +24,6 @@ import org.bukkit.util.FileUtil;
  * @author kennywilliams
  */
 public class MagicLamps extends JavaPlugin implements Listener{
-    HashMap<String, Boolean> cmdCheck = new HashMap();
-    HashMap<String, Boolean> listCheck = new HashMap();
-    HashMap<String,Boolean> dynCheck = new HashMap<>();
     ArrayList<String> a = new ArrayList();
     public static boolean update = false;
     public static String name = "";
@@ -100,10 +95,7 @@ public class MagicLamps extends JavaPlugin implements Listener{
     }
     
     @Override
-    public void onDisable()
-    {
-        SLAPI.saveAll();
-    }
+    public void onDisable(){SLAPI.saveAll();}
     
     private void registerEvents()
     {
@@ -145,7 +137,7 @@ public class MagicLamps extends JavaPlugin implements Listener{
                 metrics.start();
                 Bukkit.getLogger().log(Level.INFO,"[MagicLamps] Info submitted to mcstats.org");
             } catch (IOException e) {
-                Bukkit.getLogger().log(Level.WARNING,"MagicLamps failed to submit stats...");
+                Bukkit.getLogger().log(Level.WARNING,"MagicLamps wonders why you disabled this :(");
             }
         }
     }

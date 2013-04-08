@@ -22,6 +22,9 @@ public class SLAPI
         plugin = instance;
     }
     
+    /**
+     * Saves all of the data created on the server to the proper YAML file.
+     */
     public static void saveAll()
     {
         if(MagicLamps.configChecker)
@@ -44,6 +47,9 @@ public class SLAPI
         lamps.saveConfig();
     }
     
+    /**
+     * Loads all data from the MagicLamps data folder
+     */
     public static void loadAll()
     {
         VConfig lamps = new VConfig(plugin.getDataFolder().getAbsolutePath(), "lamps.yml", plugin);
