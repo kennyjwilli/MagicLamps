@@ -35,6 +35,7 @@ public class MagicLamps extends JavaPlugin implements Listener{
     private PlayerInteractListener piLstn;
     private RedstoneListener rLstn;
     private BlockBreakListener bbLstn;
+    private BlockPlaceListener bpLstn;
     private MglCommand mglCommand;
 
     @Override
@@ -45,6 +46,7 @@ public class MagicLamps extends JavaPlugin implements Listener{
         piLstn = new PlayerInteractListener();
         rLstn = new RedstoneListener();
         bbLstn = new BlockBreakListener();
+        bpLstn = new BlockPlaceListener();
         mglCommand = new MglCommand();
         
         //Loads all lamps
@@ -103,6 +105,7 @@ public class MagicLamps extends JavaPlugin implements Listener{
         pm.registerEvents(this.bbLstn, this);
         pm.registerEvents(this.rLstn, this);
         pm.registerEvents(this.piLstn, this);
+        pm.registerEvents(this.bpLstn, this);
         pm.registerEvents(this, this);
         
         this.getCommand("mgl").setExecutor(this.mglCommand);
